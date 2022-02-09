@@ -58,7 +58,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     func isValidPasswordString(pwdStr:String) -> Bool {
-
         let pwdRegEx = "(?:(?:(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_])|(?:(?=.*?[0-9])|(?=.*?[A-Z])|(?=.*?[-!@#$%&*ˆ+=_])))|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_]))[A-Za-z0-9-!@#$%&*ˆ+=_]{6,15}"
 
         let pwdTest = NSPredicate(format:"SELF MATCHES %@", pwdRegEx)
