@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		275BB12B27A3E4B900C41C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BB12A27A3E4B900C41C32 /* AppDelegate.swift */; };
+		275BB12D27A3E4B900C41C32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BB12C27A3E4B900C41C32 /* SceneDelegate.swift */; };
+		275BB13227A3E4B900C41C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275BB13027A3E4B900C41C32 /* Main.storyboard */; };
+		275BB13527A3E4B900C41C32 /* GardenizeNotification.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 275BB13327A3E4B900C41C32 /* GardenizeNotification.xcdatamodeld */; };
+		275BB13727A3E4BF00C41C32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 275BB13627A3E4BF00C41C32 /* Assets.xcassets */; };
+		275BB13A27A3E4BF00C41C32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275BB13827A3E4BF00C41C32 /* LaunchScreen.storyboard */; };
+		275BB14A27A3E96500C41C32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BB14927A3E96500C41C32 /* HomeViewController.swift */; };
+		275BB14C27A3E99700C41C32 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BB14B27A3E99700C41C32 /* RegisterViewController.swift */; };
+		275BB14E27A3E9AD00C41C32 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BB14D27A3E9AD00C41C32 /* ProfileViewController.swift */; };
+		275BB15027A3E9BF00C41C32 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BB14F27A3E9BF00C41C32 /* LogInViewController.swift */; };
+		275BB15627A3EEDC00C41C32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 275BB15527A3EEDB00C41C32 /* GoogleService-Info.plist */; };
+		C9B0C78EEDB3AB0BC5EE250F /* Pods_GardenizeNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AF6F7A74CA7D71069B3FA7 /* Pods_GardenizeNotification.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		275BB12727A3E4B900C41C32 /* GardenizeNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GardenizeNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		275BB12A27A3E4B900C41C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		275BB12C27A3E4B900C41C32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		275BB13127A3E4B900C41C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		275BB13427A3E4B900C41C32 /* GardenizeNotification.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GardenizeNotification.xcdatamodel; sourceTree = "<group>"; };
+		275BB13627A3E4BF00C41C32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		275BB13927A3E4BF00C41C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		275BB13B27A3E4BF00C41C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		275BB14927A3E96500C41C32 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		275BB14B27A3E99700C41C32 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		275BB14D27A3E9AD00C41C32 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		275BB14F27A3E9BF00C41C32 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		275BB15527A3EEDB00C41C32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A5FBAAE3A5A5A620EE7D8D4 /* Pods-GardenizeNotification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenizeNotification.release.xcconfig"; path = "Target Support Files/Pods-GardenizeNotification/Pods-GardenizeNotification.release.xcconfig"; sourceTree = "<group>"; };
+		E199779FA31709AD61E4F61C /* Pods-GardenizeNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenizeNotification.debug.xcconfig"; path = "Target Support Files/Pods-GardenizeNotification/Pods-GardenizeNotification.debug.xcconfig"; sourceTree = "<group>"; };
+		E8AF6F7A74CA7D71069B3FA7 /* Pods_GardenizeNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GardenizeNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		275BB12427A3E4B900C41C32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B0C78EEDB3AB0BC5EE250F /* Pods_GardenizeNotification.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		275BB11E27A3E4B800C41C32 = {
+			isa = PBXGroup;
+			children = (
+				275BB12927A3E4B900C41C32 /* GardenizeNotification */,
+				275BB12827A3E4B900C41C32 /* Products */,
+				B95D5818D6CF63EAC5DC6FF9 /* Pods */,
+				DB157183868B8F62A9B1C6F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		275BB12827A3E4B900C41C32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				275BB12727A3E4B900C41C32 /* GardenizeNotification.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		275BB12927A3E4B900C41C32 /* GardenizeNotification */ = {
+			isa = PBXGroup;
+			children = (
+				275BB14227A3E8BE00C41C32 /* ViewControllers */,
+				275BB12A27A3E4B900C41C32 /* AppDelegate.swift */,
+				275BB12C27A3E4B900C41C32 /* SceneDelegate.swift */,
+				275BB13027A3E4B900C41C32 /* Main.storyboard */,
+				275BB13627A3E4BF00C41C32 /* Assets.xcassets */,
+				275BB13827A3E4BF00C41C32 /* LaunchScreen.storyboard */,
+				275BB15527A3EEDB00C41C32 /* GoogleService-Info.plist */,
+				275BB13B27A3E4BF00C41C32 /* Info.plist */,
+				275BB13327A3E4B900C41C32 /* GardenizeNotification.xcdatamodeld */,
+			);
+			path = GardenizeNotification;
+			sourceTree = "<group>";
+		};
+		275BB14227A3E8BE00C41C32 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				275BB14927A3E96500C41C32 /* HomeViewController.swift */,
+				275BB14B27A3E99700C41C32 /* RegisterViewController.swift */,
+				275BB14D27A3E9AD00C41C32 /* ProfileViewController.swift */,
+				275BB14F27A3E9BF00C41C32 /* LogInViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B95D5818D6CF63EAC5DC6FF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E199779FA31709AD61E4F61C /* Pods-GardenizeNotification.debug.xcconfig */,
+				3A5FBAAE3A5A5A620EE7D8D4 /* Pods-GardenizeNotification.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB157183868B8F62A9B1C6F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8AF6F7A74CA7D71069B3FA7 /* Pods_GardenizeNotification.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		275BB12627A3E4B900C41C32 /* GardenizeNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 275BB13E27A3E4BF00C41C32 /* Build configuration list for PBXNativeTarget "GardenizeNotification" */;
+			buildPhases = (
+				1519ED323B445FA4C8D9F2F9 /* [CP] Check Pods Manifest.lock */,
+				275BB12327A3E4B900C41C32 /* Sources */,
+				275BB12427A3E4B900C41C32 /* Frameworks */,
+				275BB12527A3E4B900C41C32 /* Resources */,
+				56928A9F1F897DEB58EE1E92 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GardenizeNotification;
+			productName = GardenizeNotification;
+			productReference = 275BB12727A3E4B900C41C32 /* GardenizeNotification.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		275BB11F27A3E4B800C41C32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					275BB12627A3E4B900C41C32 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 275BB12227A3E4B800C41C32 /* Build configuration list for PBXProject "GardenizeNotification" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 275BB11E27A3E4B800C41C32;
+			productRefGroup = 275BB12827A3E4B900C41C32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				275BB12627A3E4B900C41C32 /* GardenizeNotification */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		275BB12527A3E4B900C41C32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275BB13A27A3E4BF00C41C32 /* LaunchScreen.storyboard in Resources */,
+				275BB13727A3E4BF00C41C32 /* Assets.xcassets in Resources */,
+				275BB15627A3EEDC00C41C32 /* GoogleService-Info.plist in Resources */,
+				275BB13227A3E4B900C41C32 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1519ED323B445FA4C8D9F2F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GardenizeNotification-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56928A9F1F897DEB58EE1E92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GardenizeNotification/Pods-GardenizeNotification-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GardenizeNotification/Pods-GardenizeNotification-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GardenizeNotification/Pods-GardenizeNotification-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		275BB12327A3E4B900C41C32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275BB12B27A3E4B900C41C32 /* AppDelegate.swift in Sources */,
+				275BB13527A3E4B900C41C32 /* GardenizeNotification.xcdatamodeld in Sources */,
+				275BB14C27A3E99700C41C32 /* RegisterViewController.swift in Sources */,
+				275BB15027A3E9BF00C41C32 /* LogInViewController.swift in Sources */,
+				275BB14E27A3E9AD00C41C32 /* ProfileViewController.swift in Sources */,
+				275BB14A27A3E96500C41C32 /* HomeViewController.swift in Sources */,
+				275BB12D27A3E4B900C41C32 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		275BB13027A3E4B900C41C32 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				275BB13127A3E4B900C41C32 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		275BB13827A3E4BF00C41C32 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				275BB13927A3E4BF00C41C32 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		275BB13C27A3E4BF00C41C32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		275BB13D27A3E4BF00C41C32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		275BB13F27A3E4BF00C41C32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E199779FA31709AD61E4F61C /* Pods-GardenizeNotification.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X9GRXAY28X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GardenizeNotification/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RomanDivkovic.GardenizeNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		275BB14027A3E4BF00C41C32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5FBAAE3A5A5A620EE7D8D4 /* Pods-GardenizeNotification.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X9GRXAY28X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GardenizeNotification/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RomanDivkovic.GardenizeNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		275BB12227A3E4B800C41C32 /* Build configuration list for PBXProject "GardenizeNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				275BB13C27A3E4BF00C41C32 /* Debug */,
+				275BB13D27A3E4BF00C41C32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		275BB13E27A3E4BF00C41C32 /* Build configuration list for PBXNativeTarget "GardenizeNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				275BB13F27A3E4BF00C41C32 /* Debug */,
+				275BB14027A3E4BF00C41C32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		275BB13327A3E4B900C41C32 /* GardenizeNotification.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				275BB13427A3E4B900C41C32 /* GardenizeNotification.xcdatamodel */,
+			);
+			currentVersion = 275BB13427A3E4B900C41C32 /* GardenizeNotification.xcdatamodel */;
+			path = GardenizeNotification.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 275BB11F27A3E4B800C41C32 /* Project object */;
+}
