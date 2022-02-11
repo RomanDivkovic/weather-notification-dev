@@ -26,34 +26,45 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
     
     func didUserRegister() {
         let txtEmail = email.text!
         let txtPassword = password.text!
-        isValidPasswordString(pwdStr: txtPassword)
-        Auth.auth().createUser(withEmail: txtEmail, password: txtPassword) { authResult, error in
-            if let x = error {
-                  let err = x as NSError
-                  switch err.code {
-                  case AuthErrorCode.wrongPassword.rawValue:
-                      self.lblStatus.text = "Wrong password"
-                     print("wrong password")
-                  case AuthErrorCode.invalidEmail.rawValue:
-                      self.lblStatus.text = "Invalid email"
-                     print("invalid email")
-                  case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
-                      self.lblStatus.text = "accountExistsWithDifferentCredential"
-                     print("accountExistsWithDifferentCredential")
-                  case AuthErrorCode.emailAlreadyInUse.rawValue: //<- Your Error
-                      self.lblStatus.text = "Email is alreay in use"
-                     print("email is alreay in use")
-                  default:
-                     print("unknown error: \(err.localizedDescription)")
-                  }
-               } else {
-                   //continue to app
-                   self.performSegue(withIdentifier: "fromRegister", sender: nil)
-               }
+        if (isValidPasswordString(pwdStr: txtPassword) == true) {
+            Auth.auth().createUser(withEmail: txtEmail, password: txtPassword) { authResult, error in
+                if let x = error {
+                      let err = x as NSError
+                      switch err.code {
+                      case AuthErrorCode.wrongPassword.rawValue:
+                          self.lblStatus.text = "Wrong password"
+                         print("wrong password")
+                      case AuthErrorCode.invalidEmail.rawValue:
+                          self.lblStatus.text = "Invalid email"
+                         print("invalid email")
+                      case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
+                          self.lblStatus.text = "accountExistsWithDifferentCredential"
+                         print("accountExistsWithDifferentCredential")
+                      case AuthErrorCode.emailAlreadyInUse.rawValue:
+                          self.lblStatus.text = "Email is alreay in use"
+                         print("email is alreay in use")
+                      default:
+                         print("unknown error: \(err.localizedDescription)")
+                      }
+                   } else {
+                       //continue to app
+                       self.performSegue(withIdentifier: "fromRegister", sender: nil)
+                   }
+            }
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Password needs between 6-15, digets or letters and one number atleast", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okey", style: .default, handler: { action in
+                
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -62,10 +73,5 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
         let pwdTest = NSPredicate(format:"SELF MATCHES %@", pwdRegEx)
         return pwdTest.evaluate(with: pwdStr)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 }

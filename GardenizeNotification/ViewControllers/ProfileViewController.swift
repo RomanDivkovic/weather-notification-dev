@@ -8,6 +8,19 @@
 import UIKit
 import Firebase
 
+/**
+ Neeed to show when delete and update are done
+ with a toast message.
+ try
+ installing this in pod
+ pod 'DCToastView'
+ 
+ import DCToastView
+
+ And use it
+
+ ToastPresenter.shared.show(in: self.view, message: "This is a toast")
+ */
 class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     var userEmail: String!
@@ -51,6 +64,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
                 let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
                 Auth.auth().currentUser?.updatePassword(to: textField!.text!) { (error) in
+                    
                     print("Changed password")
                 }
             }))
@@ -63,7 +77,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     func showAlertDelete() {
-            let chooseAlert = UIAlertController(title: "User delete", message: "Do you wish to delete user?", preferredStyle: .alert)
+            let chooseAlert = UIAlertController(title: "Delete account", message: "Do you wish to delete account?", preferredStyle: .alert)
             chooseAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in }))
             chooseAlert.addAction(UIAlertAction(title: "Delete", style: .default, handler: { action in
                 self.deleteUser()
@@ -83,6 +97,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         }
     }
     func deleteUser(){
+//        Auth.auth().currentUser.
         Auth.auth().currentUser!.delete()
         performSegue(withIdentifier: "LoginController", sender: nil)
 //        let user = Auth.auth().currentUser

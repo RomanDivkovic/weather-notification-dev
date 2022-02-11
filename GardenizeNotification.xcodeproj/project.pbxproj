@@ -18,6 +18,7 @@
 		275BB14E27A3E9AD00C41C32 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BB14D27A3E9AD00C41C32 /* ProfileViewController.swift */; };
 		275BB15027A3E9BF00C41C32 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BB14F27A3E9BF00C41C32 /* LogInViewController.swift */; };
 		275BB15627A3EEDC00C41C32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 275BB15527A3EEDB00C41C32 /* GoogleService-Info.plist */; };
+		27673BA727B40EC800C061A5 /* ForgotPswViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27673BA627B40EC500C061A5 /* ForgotPswViewController.swift */; };
 		C9B0C78EEDB3AB0BC5EE250F /* Pods_GardenizeNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AF6F7A74CA7D71069B3FA7 /* Pods_GardenizeNotification.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		275BB14D27A3E9AD00C41C32 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		275BB14F27A3E9BF00C41C32 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		275BB15527A3EEDB00C41C32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		27673BA627B40EC500C061A5 /* ForgotPswViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPswViewController.swift; sourceTree = "<group>"; };
 		3A5FBAAE3A5A5A620EE7D8D4 /* Pods-GardenizeNotification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenizeNotification.release.xcconfig"; path = "Target Support Files/Pods-GardenizeNotification/Pods-GardenizeNotification.release.xcconfig"; sourceTree = "<group>"; };
 		E199779FA31709AD61E4F61C /* Pods-GardenizeNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardenizeNotification.debug.xcconfig"; path = "Target Support Files/Pods-GardenizeNotification/Pods-GardenizeNotification.debug.xcconfig"; sourceTree = "<group>"; };
 		E8AF6F7A74CA7D71069B3FA7 /* Pods_GardenizeNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GardenizeNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 				275BB14B27A3E99700C41C32 /* RegisterViewController.swift */,
 				275BB14D27A3E9AD00C41C32 /* ProfileViewController.swift */,
 				275BB14F27A3E9BF00C41C32 /* LogInViewController.swift */,
+				27673BA627B40EC500C061A5 /* ForgotPswViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				275BB12B27A3E4B900C41C32 /* AppDelegate.swift in Sources */,
 				275BB13527A3E4B900C41C32 /* GardenizeNotification.xcdatamodeld in Sources */,
+				27673BA727B40EC800C061A5 /* ForgotPswViewController.swift in Sources */,
 				275BB14C27A3E99700C41C32 /* RegisterViewController.swift in Sources */,
 				275BB15027A3E9BF00C41C32 /* LogInViewController.swift in Sources */,
 				275BB14E27A3E9AD00C41C32 /* ProfileViewController.swift in Sources */,

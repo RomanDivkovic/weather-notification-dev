@@ -21,6 +21,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func LogIn(_ sender: UIButton) {
         didUserSignIn()
     }
+    @IBAction func forgot(_ sender: Any) {
+        performSegue(withIdentifier: "ForgotViewController", sender: nil)
+    }
     @IBAction func register(_ sender: Any) {
         performSegue(withIdentifier: "RegisterViewController", sender: nil)
     }
@@ -28,23 +31,25 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
     }
-    func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-
-        if identifier == "homeController" { // you define it in the storyboard (click on the segue, then Attributes' inspector > Identifier
-
-            if email.text!.isEmpty == true {
-                self.lblStatus.text = "Email or password wrong or empty"
-                print("*** NOPE, segue wont occur")
-                return false
-            }
-            else {
-                print("*** YEP, segue will occur")
-                didUserSignIn()
-            }
-        }
-        // by default, transition
-        return true
-    }
+    
+    // TROR INTE DET BEHÖVS
+//    func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+//
+//        if identifier == "homeController" { // you define it in the storyboard (click on the segue, then Attributes' inspector > Identifier
+//
+//            if email.text!.isEmpty == true {
+//                self.lblStatus.text = "Email or password wrong or empty"
+//                print("*** NOPE, segue wont occur")
+//                return false
+//            }
+//            else {
+//                print("*** YEP, segue will occur")
+//                didUserSignIn()
+//            }
+//        }
+//        // by default, transition
+//        return true
+//    }
     
     func isValidPasswordString(pwdStr:String) -> Bool {
 
