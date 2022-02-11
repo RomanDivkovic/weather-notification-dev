@@ -29,7 +29,6 @@ class ForgotPswViewController: UIViewController {
     
     func callFIRPasswordReset(){
         //show loader
-        
         let auth = Auth.auth()
         
         auth.sendPasswordReset(withEmail: email.text!, completion: { (error) in
@@ -38,7 +37,7 @@ class ForgotPswViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Okey", style: .default, handler: { action in }))
                 self.present(alert, animated: true, completion: nil)
             }
-            let alert = UIAlertController(title: "Succes", message: "An email was sent to adress to reset password", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Success", message: "An email was sent to email to reset password", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Okey", style: .default, handler: { action in }))
             
             self.present(alert, animated: true, completion: nil)

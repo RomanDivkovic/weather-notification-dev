@@ -32,25 +32,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    // TROR INTE DET BEHÖVS
-//    func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-//
-//        if identifier == "homeController" { // you define it in the storyboard (click on the segue, then Attributes' inspector > Identifier
-//
-//            if email.text!.isEmpty == true {
-//                self.lblStatus.text = "Email or password wrong or empty"
-//                print("*** NOPE, segue wont occur")
-//                return false
-//            }
-//            else {
-//                print("*** YEP, segue will occur")
-//                didUserSignIn()
-//            }
-//        }
-//        // by default, transition
-//        return true
-//    }
-    
     func isValidPasswordString(pwdStr:String) -> Bool {
 
         let pwdRegEx = "(?:(?:(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_])|(?:(?=.*?[0-9])|(?=.*?[A-Z])|(?=.*?[-!@#$%&*ˆ+=_])))|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_]))[A-Za-z0-9-!@#$%&*ˆ+=_]{6,15}"

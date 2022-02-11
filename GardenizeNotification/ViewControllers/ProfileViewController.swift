@@ -8,9 +8,7 @@
 import UIKit
 import Firebase
 
-/**
- Neeed to show when delete and update are done
- with a toast message.
+/*
  try
  installing this in pod
  pod 'DCToastView'
@@ -96,6 +94,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             print("Error", signOutError)
         }
     }
+    
+    // Need to fix the delete so all of user data deletes before user deletse from app
     func deleteUser(){
 //        Auth.auth().currentUser.
         Auth.auth().currentUser!.delete()
@@ -115,6 +115,34 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
 //              user?.delete()
 //          }
 //        }
+        
+        /*
+         
+         db.collection("users").document(self.user.uid).collection("sachets").getDocuments() { (QuerySnapshot, err) in
+             if let err = err{
+                 print("Erreur de lecture : \(err)")
+             } else {
+                 for document in QuerySnapshot!.documents {
+                     db.collection("users").document(self.user.uid).collection("sachets").document(document.documentID).delete(){ err in
+                         if let err = err {
+                             print("   🔴 Problème de suppression des documents \(err)")
+                         } else {
+                             print("   🔵 Documents supprimés")
+                         }
+                     }
+                 }
+             }
+
+             self.user?.delete { error in
+                 if let error = error {
+                     print("   🔴 Problème de suppression du compte Utilisateur \(error)")
+                 } else {
+                     print("   🔵 Utilisateur supprimé")
+                 }
+             }
+         }
+         
+         */
     }
 
     /*

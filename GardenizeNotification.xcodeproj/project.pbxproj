@@ -75,6 +75,9 @@
 		275BB12927A3E4B900C41C32 /* GardenizeNotification */ = {
 			isa = PBXGroup;
 			children = (
+				27673BAA27B7188300C061A5 /* Protocols */,
+				27673BA927B7187C00C061A5 /* Models */,
+				27673BA827B7185100C061A5 /* Data */,
 				275BB14227A3E8BE00C41C32 /* ViewControllers */,
 				275BB12A27A3E4B900C41C32 /* AppDelegate.swift */,
 				275BB12C27A3E4B900C41C32 /* SceneDelegate.swift */,
@@ -83,7 +86,6 @@
 				275BB13827A3E4BF00C41C32 /* LaunchScreen.storyboard */,
 				275BB15527A3EEDB00C41C32 /* GoogleService-Info.plist */,
 				275BB13B27A3E4BF00C41C32 /* Info.plist */,
-				275BB13327A3E4B900C41C32 /* GardenizeNotification.xcdatamodeld */,
 			);
 			path = GardenizeNotification;
 			sourceTree = "<group>";
@@ -98,6 +100,28 @@
 				27673BA627B40EC500C061A5 /* ForgotPswViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		27673BA827B7185100C061A5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				275BB13327A3E4B900C41C32 /* GardenizeNotification.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		27673BA927B7187C00C061A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		27673BAA27B7188300C061A5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		B95D5818D6CF63EAC5DC6FF9 /* Pods */ = {
