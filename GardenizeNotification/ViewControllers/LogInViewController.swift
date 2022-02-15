@@ -71,7 +71,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                    //continue to app
                    if (Auth.auth().currentUser != nil) {
                        ToastPresenter.shared.show(in: self!.view, message: "Sign In, ok!!", place: .up, timeOut: 1.5)
-    //                   self!.lblStatus.text = "Sign In, ok!!"
                        self!.performSegue(withIdentifier: "fromLogIn", sender: nil)
                    }
 //                   ToastPresenter.shared.show(in: self!.view, message: "Sign In, ok!!", place: .up, timeOut: 1.5)

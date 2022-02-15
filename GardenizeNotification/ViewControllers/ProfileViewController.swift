@@ -7,18 +7,8 @@
 
 import UIKit
 import Firebase
+import DCToastView
 
-/*
- try
- installing this in pod
- pod 'DCToastView'
- 
- import DCToastView
-
- And use it
-
- ToastPresenter.shared.show(in: self.view, message: "This is a toast")
- */
 class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     var userEmail: String!
@@ -60,9 +50,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             }
 
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-                let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+                let textField = alert?.textFields![0]
                 Auth.auth().currentUser?.updatePassword(to: textField!.text!) { (error) in
-                    
+                    ToastPresenter.shared.show(in: self.view, message: "Changed password", place: .down, timeOut: 2.5)
                     print("Changed password")
                 }
             }))
@@ -84,65 +74,29 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     func logOut() {
-        // LOG OUT
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
             performSegue(withIdentifier: "LoginController", sender: nil)
         } catch let signOutError as NSError{
             self.lblStrong.text = "Failed"
+            ToastPresenter.shared.show(in: self.view, message:"Error, couldnt sign out", place: .down, timeOut: 2.5)
             print("Error", signOutError)
         }
     }
     
-    // Need to fix the delete so all of user data deletes before user deletse from app
+    // Delets first user data then deletes user from firebase
     func deleteUser(){
-//        Auth.auth().currentUser.
-        Auth.auth().currentUser!.delete()
-        performSegue(withIdentifier: "LoginController", sender: nil)
-//        let user = Auth.auth().currentUser
-//        var credential: AuthCredential
-//
-//        // Prompt the user to re-provide their sign-in credentials
-//
-//        user?.reauthenticate(with: credential) { error in
-//          if let error = error {
-//            // An error happened.
-//              self.lblStrong.text = "Failed to reauthenticate user"
-//              print("Error!!")
-//          } else {
-//            // User re-authenticated.
-//              user?.delete()
-//          }
-//        }
-        
-        /*
-         
-         db.collection("users").document(self.user.uid).collection("sachets").getDocuments() { (QuerySnapshot, err) in
-             if let err = err{
-                 print("Erreur de lecture : \(err)")
-             } else {
-                 for document in QuerySnapshot!.documents {
-                     db.collection("users").document(self.user.uid).collection("sachets").document(document.documentID).delete(){ err in
-                         if let err = err {
-                             print("   🔴 Problème de suppression des documents \(err)")
-                         } else {
-                             print("   🔵 Documents supprimés")
-                         }
-                     }
-                 }
-             }
-
-             self.user?.delete { error in
-                 if let error = error {
-                     print("   🔴 Problème de suppression du compte Utilisateur \(error)")
-                 } else {
-                     print("   🔵 Utilisateur supprimé")
-                 }
-             }
-         }
-         
-         */
+        db.collection("users").document(Auth.auth().currentUser!.uid).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+                ToastPresenter.shared.show(in: self.view, message:"Error removing document: \(err)", place: .down, timeOut: 2.5)
+            } else {
+                print("Document successfully removed!")
+                Auth.auth().currentUser!.delete()
+                self.performSegue(withIdentifier: "LoginController", sender: nil)
+            }
+        }
     }
 
     /*
