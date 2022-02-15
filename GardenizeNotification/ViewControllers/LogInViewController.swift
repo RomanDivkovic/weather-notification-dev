@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import DCToastView
 
 
 class LogInViewController: UIViewController, UITextFieldDelegate {
@@ -32,13 +33,13 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    func isValidPasswordString(pwdStr:String) -> Bool {
-
-        let pwdRegEx = "(?:(?:(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_])|(?:(?=.*?[0-9])|(?=.*?[A-Z])|(?=.*?[-!@#$%&*ˆ+=_])))|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_]))[A-Za-z0-9-!@#$%&*ˆ+=_]{6,15}"
-
-        let pwdTest = NSPredicate(format:"SELF MATCHES %@", pwdRegEx)
-        return pwdTest.evaluate(with: pwdStr)
-    }
+//    func isValidPasswordString(pwdStr:String) -> Bool {
+//
+//        let pwdRegEx = "(?:(?:(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_])|(?:(?=.*?[0-9])|(?=.*?[A-Z])|(?=.*?[-!@#$%&*ˆ+=_])))|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_]))[A-Za-z0-9-!@#$%&*ˆ+=_]{6,15}"
+//
+//        let pwdTest = NSPredicate(format:"SELF MATCHES %@", pwdRegEx)
+//        return pwdTest.evaluate(with: pwdStr)
+//    }
 
     func didUserSignIn() {
         let txtEmail = email.text!
@@ -49,26 +50,32 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                   let err = x as NSError
                   switch err.code {
                   case AuthErrorCode.wrongPassword.rawValue:
-                     self!.lblStatus.text = "Wrong password"
+                      ToastPresenter.shared.show(in: self!.view , message: "wrong password", place: .down, timeOut: 1.5)
                      print("wrong password")
                   case AuthErrorCode.invalidEmail.rawValue:
-                     self!.lblStatus.text = "Invalid email"
+                      ToastPresenter.shared.show(in: self!.view, message: "Invalid email", place: .down, timeOut: 1.5)
                      print("invalid email")
                   case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
-                      self!.lblStatus.text = "accountExistsWithDifferentCredential"
+                      ToastPresenter.shared.show(in: self!.view, message: "Account Exists With Different Credential", place: .down, timeOut: 1.5)
                      print("accountExistsWithDifferentCredential")
-                  case AuthErrorCode.emailAlreadyInUse.rawValue: //<- Your Error
-                      self!.lblStatus.text = "Email is alreay in use"
+                  case AuthErrorCode.emailAlreadyInUse.rawValue:
+                      ToastPresenter.shared.show(in: self!.view, message: "Email is alreay in use", place: .down, timeOut: 1.5)
+//                      self!.lblStatus.text = "Email is alreay in use"
                      print("email is alreay in use")
                   default:
-                      self!.lblStatus.text = "Unknown error: \(err.localizedDescription)"
+                      ToastPresenter.shared.show(in: self!.view, message: "unknown error: \(err.localizedDescription)", place: .down, timeOut: 2.5)
                      print("unknown error: \(err.localizedDescription)")
                   }
                 
                } else {
                    //continue to app
-                   self!.lblStatus.text = "Sign In, ok!!"
-                   self!.performSegue(withIdentifier: "fromLogIn", sender: nil)
+                   if (Auth.auth().currentUser != nil) {
+                       ToastPresenter.shared.show(in: self!.view, message: "Sign In, ok!!", place: .up, timeOut: 1.5)
+    //                   self!.lblStatus.text = "Sign In, ok!!"
+                       self!.performSegue(withIdentifier: "fromLogIn", sender: nil)
+                   }
+//                   ToastPresenter.shared.show(in: self!.view, message: "Sign In, ok!!", place: .up, timeOut: 1.5)
+//                   self!.performSegue(withIdentifier: "fromLogIn", sender: nil)
 
                }
         }

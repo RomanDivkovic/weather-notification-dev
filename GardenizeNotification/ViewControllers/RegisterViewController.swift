@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import DCToastView
 
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
@@ -40,22 +41,24 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                       let err = x as NSError
                       switch err.code {
                       case AuthErrorCode.wrongPassword.rawValue:
-                          self.lblStatus.text = "Wrong password"
+                          ToastPresenter.shared.show(in: self.view, message: "wrong password", place: .down, timeOut: 1.5)
                          print("wrong password")
                       case AuthErrorCode.invalidEmail.rawValue:
-                          self.lblStatus.text = "Invalid email"
+                          ToastPresenter.shared.show(in: self.view, message: "Invalid email", place: .down, timeOut: 1.5)
                          print("invalid email")
                       case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
-                          self.lblStatus.text = "accountExistsWithDifferentCredential"
+                          ToastPresenter.shared.show(in: self.view, message: "Account Exists With Different Credential", place: .down, timeOut: 1.5)
                          print("accountExistsWithDifferentCredential")
                       case AuthErrorCode.emailAlreadyInUse.rawValue:
-                          self.lblStatus.text = "Email is alreay in use"
+                          ToastPresenter.shared.show(in: self.view, message: "Email is alreay in use", place: .down, timeOut: 1.5)
                          print("email is alreay in use")
                       default:
+                          ToastPresenter.shared.show(in: self.view, message: "unknown error: \(err.localizedDescription)", place: .down, timeOut: 2.5)
                          print("unknown error: \(err.localizedDescription)")
                       }
                    } else {
                        //continue to app
+                       ToastPresenter.shared.show(in: self.view, message: "Register is good!", place: .down, timeOut: 1.5)
                        self.performSegue(withIdentifier: "fromRegister", sender: nil)
                    }
             }
